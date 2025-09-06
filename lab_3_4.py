@@ -14,7 +14,7 @@ while True:
         print(result)
 
     def process(numMonth):
-        if numMonth != 0 and numMonth <=12:
+        if numMonth != 0 and numMonth <=12 and  numMonth > 0:
             date = datetime(1999, numMonth, 1)
             return date.strftime('%B')
         else:
