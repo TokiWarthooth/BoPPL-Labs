@@ -6,7 +6,7 @@ import re
 from collections import Counter
 
 print('Определитель частоты повторяемости каждой кириллической буквы в тексте, сортировка в порядке убывания частоты, и запись результата в файл output.txt')
-with open('data/data_lab_2_4/input.txt', 'r') as wordsFromFile1:
+with open('../data/data_lab_2/data_lab_2_4/input.txt', 'r') as wordsFromFile1:
     print('Открытие файла input.txt')
     allText = wordsFromFile1.read()
 
