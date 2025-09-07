@@ -2,7 +2,7 @@
 # Date: 04.09.2025
 
 print('Расчет общего произведния файлов и запись в новый output.txt')
-with open('data/data_lab_2_2/input.txt', 'r') as numbers_file:
+with open('../data/data_lab_2/data_lab_2_2/input.txt', 'r') as numbers_file:
     print('Открытие файла')
     numbers = numbers_file.readline().strip()
     clearNum = numbers.split(' ')

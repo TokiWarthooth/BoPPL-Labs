@@ -5,7 +5,7 @@
 import re
 
 print('Запись всех слов из двух файлов input_x.txt в новый output.txt')
-with open('data/data_lab_2_3/input_1.txt', 'r') as wordsFromFile1:
+with open('../data/data_lab_2/data_lab_2_3/input_1.txt', 'r') as wordsFromFile1:
     print('Открытие файла input_1.txt')
     words1 = wordsFromFile1.read()
 
@@ -13,7 +13,7 @@ with open('data/data_lab_2_3/input_1.txt', 'r') as wordsFromFile1:
     cleanedTextFromInput1 = re.sub(r'[^a-zA-Zа-яА-Я\s\^0-9]', '', words1)
     print(cleanedTextFromInput1)
 
-    with open('data/data_lab_2_3/input_2.txt', 'r') as wordsFromFile2:
+    with open('../data/data_lab_2/data_lab_2_3/input_2.txt', 'r') as wordsFromFile2:
         print('Открытие файла input_2.txt')
         words2 = wordsFromFile2.read()
 

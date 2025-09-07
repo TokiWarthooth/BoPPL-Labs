@@ -1,7 +1,8 @@
 # Author: Skwisgaar Skwigelf aka Skripnikov Maxim <max.great339@gmail.com>
 # Date: 07.09.2025
 
-library = [
+# Констатнта (входной json)
+LIBRARY = [
     {
         'name': 'Программирование на языке Python.',
         'price': 469,
@@ -46,34 +47,35 @@ class Book:
     def pages(self):
         return self.__pages
 
-    def pageCost(self):
+    # Переменные и функции в snake_case
+    def page_cost(self):
         return round(self.price / self.pages, 2)
 
     def __str__(self):
-        return f"Название: {self.__name} \t Цена: {self.__price} руб. \t Страницы: {self.__pages} \t Цена одной страницы: {self.pageCost()} руб."
+        return f"Название: {self.__name} \t Цена: {self.__price} руб. \t Страницы: {self.__pages} \t Цена одной страницы: {self.page_cost()} руб."
 
-
+# Класс в CamelCase
 class LibraryManager:
-    def __init__(self, libraryData):
+    def __init__(self, library_data):
         self.books = []
-        for bookData in libraryData:
-            book = Book(bookData['name'], bookData['price'], bookData['pages'])
+        for book_data in library_data:
+            book = Book(book_data['name'], book_data['price'], book_data['pages'])
             self.books.append(book)
 
-    def priceChanger(self):
+    def price_changer(self):
         for book in self.books:
             if book.name.startswith('Программирование'):
                 book.price *= 2
 
-    def printBooks(self):
+    def print_books(self):
         for book in self.books:
             print(book)
 
 
-libraryManager = LibraryManager(library)
+library_manager = LibraryManager(LIBRARY)
 print("Исходные цены:")
-libraryManager.printBooks()
+library_manager.print_books()
 
 print("\nЦены после изменения:")
-libraryManager.priceChanger()
-libraryManager.printBooks()
+library_manager.price_changer()
+library_manager.print_books()
